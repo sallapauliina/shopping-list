@@ -1,0 +1,35 @@
+<% layout("./layouts/layout.eta") %>
+
+<h1><%=it.spesificList.name%></h1>
+
+<h2><a href="/lists">Shopping lists</a></h2>
+
+<form method="POST" action="/lists/<%=it.spesificList.id%>/items">
+  Name: <input type="text" name="name"/>
+  <input type="submit" value="Add an item to the list!"/>
+</form>
+
+<ul>
+<% if (it.activeItems===true) { %>
+
+    <% it.activeItems.forEach((obj) => { %>
+        <% if(obj.NonActiveItems===false) { %>
+            <li>
+                <%=obj.name%>
+                <form method="POST" action="/lists/<%=it.spesificList.id%>/items/<%=obj.id%>">
+                    <input type="submit" value="Mark collected!"/>
+                </form>
+                <% } %>
+            </li>
+    <% }); %>
+<%}%>
+
+<% if(it.NonActiveItems===true) { %>
+
+    <% it.NonActiveItems.forEach((obj) => { %>
+        <li>
+            <del><%=obj.name%></del>
+        </li>
+    <% }); %>
+<%}%>
+</ul>
