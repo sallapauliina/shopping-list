@@ -8,6 +8,7 @@ configure({
 
 const handleRequest = async (request) => {
   const url = new URL(request.url);
+  console.log("testi");
 
   switch (true) {
     case request.method === "GET" && url.pathname === "/lists":
