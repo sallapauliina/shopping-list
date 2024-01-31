@@ -1,4 +1,5 @@
-import postgres from "https://deno.land/x/postgresjs@v3.4.2/mod.js";
-export { postgres };
 export { serve } from "https://deno.land/std@0.202.0/http/server.ts";
-export { renderFile } from "https://deno.land/x/eta@v2.2.0/mod.ts";
+export { Pool } from "https://deno.land/x/postgres@v0.14.3/mod.ts";
+export { configure, renderFile } from "https://deno.land/x/eta@v2.2.0/mod.ts";
+import postgres from "https://deno.land/x/postgresjs@v3.3.5/mod.js";
+export { postgres };
