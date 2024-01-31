@@ -37,4 +37,4 @@ The project includes five end-to-end tests for application functionality. The te
 
 ## Online Deployment
 
-The application is deployed online with the URL:
+The application is deployed online with the URL: https://wsd-course-project-i-0627.onrender.com/
