@@ -10,28 +10,28 @@ const handleRequest = async (request) => {
   const url = new URL(request.url);
 
   switch (true) {
-    case request.method === "GET" && url.pathname === "/lists":
-      return await shoppingListController.viewAllLists(request);
-
-    case request.method === "GET" && url.pathname === "/":
+    case url.pathname === "/" && request.method === "GET":
       return await shoppingListController.mainFunction(request);
 
-    case request.method === "POST" && url.pathname === "/lists":
+    case url.pathname === "/lists" && request.method === "GET":
+      return await shoppingListController.viewAllLists(request);
+
+    case url.pathname === "/lists" && request.method === "POST":
       return await shoppingListController.addToList(request);
 
-    case request.method === "POST" &&
-      url.pathname.match("lists/[0-9]+/items/+[0-9]"):
+    case url.pathname.match("lists/[0-9]+/items/+[0-9]") &&
+      request.method === "POST":
       return await shoppingListController.crossingOver(request);
 
-    case request.method === "POST" && url.pathname.match("lists/[0-9]+/items"):
+    case url.pathname.match("lists/[0-9]+") && request.method === "GET":
+      return await shoppingListController.List(request);
+
+    case url.pathname.match("lists/[0-9]+/items") && request.method === "POST":
       return await shoppingListController.NewItem(request);
 
-    case request.method === "POST" &&
-      url.pathname.match("lists/[0-9]+/deactivate"):
+    case url.pathname.match("lists/[0-9]+/deactivate") &&
+      request.method === "POST":
       return await shoppingListController.deleteTheList(request);
-
-    case request.method === "GET" && url.pathname.match("lists/[0-9]"):
-      return await shoppingListController.List(request);
 
     default:
       return await shoppingListController.mainFunction(request);
