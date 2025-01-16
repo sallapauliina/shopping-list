@@ -5,5 +5,4 @@ const errorMiddleware = async (context, next) => {
     console.log(e);
   }
 };
-
 export { errorMiddleware };

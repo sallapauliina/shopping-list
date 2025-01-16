@@ -34,7 +34,7 @@ services:
       - project.env
 
   e2e-playwright:
-    entrypoint: "/bin/true" # Prevent startup on docker-compose up
+    entrypoint: "/bin/true"
     build: e2e-playwright
     image: e2e-playwright
     network_mode: host

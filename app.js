@@ -37,5 +37,4 @@ const handleRequest = async (request) => {
       return await shoppingListController.mainFunction(request);
   }
 };
-
 serve(handleRequest, { port: 7777 });

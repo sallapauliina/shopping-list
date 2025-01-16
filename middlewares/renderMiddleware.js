@@ -12,5 +12,4 @@ const renderMiddleware = async (context, next) => {
 
   await next();
 };
-
 export { renderMiddleware };

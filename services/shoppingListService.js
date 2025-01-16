@@ -63,7 +63,6 @@ const findNonActiveItems = async (shopping_list_id) => {
 const crossingItemOfTheList = async (id) => {
   await sql`UPDATE shopping_list_items SET collected = true WHERE id = ${id}`;
 };
-
 export {
   createLists,
   findAllActiveLists,

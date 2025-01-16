@@ -9,7 +9,6 @@
   <input type="submit" value="Create a new list!"/>
 </form>
 
-
 <h2>All of the active shopping lists:</h2>
 <% if (it.lists.length) { %>
   <ul>
