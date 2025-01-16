@@ -5,20 +5,24 @@
 ## Application features
 
 Main page
+
 Access: Available at http://localhost:7777.
 Functionality: Displays the title "Shared shopping lists", application statistics, and a link to the shopping lists page.
 
 Shopping lists
+
 Management: Users can add new shopping lists and view existing ones at /lists.
 List addition: Adding a new list is done via a POST request with list name.
 List deactivation: Each list can be deactivated through a corresponding button.
 
 Spesific shopping lists
+
 Viewing lists: Access individual lists at /lists/{id}.
 Item management: Add items to lists and mark items as collected.
 Ordering: Items are displayed in alphabetical order, separating uncollected and collected items.
 
 Statistics
+
 Display: The main page shows the number of shopping lists and items, including both active and inactive lists and collected and uncollected items.
 No list scenario: Displays "No shopping lists yet." if no lists are found.
 
