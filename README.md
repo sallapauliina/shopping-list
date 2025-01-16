@@ -1,6 +1,6 @@
 # Introduction
 
-"Shared shopping list" is an application which allows users to create shopping lists, add items to these lists, mark items as collected, and maintain a record of active and inactive lists. The application has a three-tier architecture, dividing the functionality into views, controllers, and services, with a backend database.
+"Shared shopping list" is an application which allows users to create shopping lists, add items to these lists, mark items as collected, maintain a record of active and inactive lists. The application has a three-tier architecture, dividing the functionality into views, controllers, and services, with a backend database.
 
 ## Application features
 
